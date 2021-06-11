@@ -1,0 +1,20 @@
+const router = require('express').Router()
+const adminController = require('../controllers/adminController')
+const {upload} = require('../middlewares/multer')
+const auth = require('../middlewares/auth')
+
+router.get('/signin', adminController.viewSignin)
+router.post('/signin', adminController.actionSignin)
+router.use(auth)
+router.get('/logout', adminController.actionLogout)
+router.get('/', adminController.viewDashboard)
+router.get('/building', adminController.viewBuilding)
+router.post('/building',upload, adminController.addBuilding)
+router.put('/building',upload, adminController.editBuilding)
+router.delete('/building/:id', adminController.deleteBuilding)
+router.get('/gallery', adminController.viewGallery)
+router.post('/gallery',upload, adminController.addGallery)
+router.put('/gallery',upload, adminController.editGallery)
+router.delete('/gallery/:id', adminController.deleteGallery)
+
+module.exports = router

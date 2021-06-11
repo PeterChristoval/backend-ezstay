@@ -1,0 +1,134 @@
+<%- include('../partials/header.ejs') %> 
+    
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+<%- include('../partials/sidebar.ejs') %>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+<%- include('../partials/navbar.ejs') %>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">List Gallery</h1>
+
+                    <% if (alert.message != '') { %>
+                        <div class="alert alert-<%= alert.status %>" role="alert">
+                            <%= alert.message %>
+                        </div>
+                    <% } %> 
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addGallery">
+                                <i class="fas fa-fw fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Name</th>
+                                            <th>Place</th>
+                                            <th>City</th>
+                                            <th>Rating</th>
+                                            <th>Image</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% for (let i = 0; i < gallery.length; i++) { %>
+                                            <tr>
+                                                <td><%= i+1 %> </td>
+                                                <td><%= gallery[i].name %> </td>
+                                                <td><%= gallery[i].place %> </td>
+                                                <td><%= gallery[i].city %> </td>
+                                                <td><%= gallery[i].rating %> </td>
+                                                <td>
+                                                    <img src="http://localhost:3000/<%= gallery[i].imageUrl %> " alt="" style="width: 100px;">
+                                                </td>
+                                                <td>
+                                                    <form action="/admin/gallery/<%= gallery[i]._id %>?_method=DELETE" method="post">
+                                                        <a href="javascript:void(0)" class="btn btn-warning btn-update" type="button" data-toggle="modal" data-target="#editgallery" data-id ="<%= gallery[i]._id %>" data-name = "<%= gallery[i].name %>" data-place = "<%= gallery[i].place %>" data-city = "<%= gallery[i].city %>" data-rating = "<%= gallery[i].rating %>">
+                                                            <i class="fas fa-fw fa-edit"></i>
+                                                        </a>
+                                                        <button class="btn btn-danger" type="submit">
+                                                            <i class="fas fa-fw fa-trash-alt"></i>
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        <% } %> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+<%- include('../partials/footer.ejs') %>
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('../partials/js.ejs') %>
+<%- include('add.ejs') %> 
+<%- include('edit.ejs') %>
+<script>
+    $('#dataTable').on('click', '.btn-update', function() {
+        let id = $(this).data('id')
+        let name = $(this).data('name')
+        let place = $(this).data('place')
+        let city = $(this).data('city')
+        let rating = $(this).data('rating')
+
+        $('#editgallery').modal('show')
+        $('.id').val(id)
+        $('.name').val(name)
+        $('.place').val(place)
+        $('.city').val(city)
+        $('.rating').val(rating)
+    })
+</script>

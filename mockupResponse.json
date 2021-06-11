@@ -1,0 +1,61 @@
+{
+    "recomendedBuilding": [
+        {
+            "id": "ad12fasd",
+            "name": "High Fly",
+            "price": 430,
+            "place": "Gambir",
+            "city": "Jakarta",
+            "imageUrl": "/assets/images/building/high_fly.png",
+            "rating": "4.8",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla consectetur hic. Deleniti sequi eligendi eos molestiae, repellat deserunt iusto earum, est commodi alias molestias aliquam totam, pariatur mollitia nisi!"
+        },
+        {
+            "id": "ad12fasd",
+            "name": "High Fly",
+            "price": 430,
+            "place": "Gambir",
+            "city": "Jakarta",
+            "imageUrl": "/assets/images/building/high_fly.png",
+            "rating": "4.8",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla consectetur hic. Deleniti sequi eligendi eos molestiae, repellat deserunt iusto earum, est commodi alias molestias aliquam totam, pariatur mollitia nisi!"
+        },
+        {
+            "id": "ad12fasd",
+            "name": "High Fly",
+            "price": 430,
+            "place": "Gambir",
+            "city": "Jakarta",
+            "imageUrl": "/assets/images/building/high_fly.png",
+            "rating": "4.8",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nulla consectetur hic. Deleniti sequi eligendi eos molestiae, repellat deserunt iusto earum, est commodi alias molestias aliquam totam, pariatur mollitia nisi!"
+        }
+    ],
+    "gallery": [
+        {
+            "id": "ad12fasd",
+            "name": "High Fly",
+            "place": "Gambir",
+            "city": "Jakarta",
+            "imageUrl": "/assets/images/building/high_fly.png",
+            "rating": "4.8"
+        },
+        {
+            "id": "ad12fasd",
+            "name": "High Fly",
+            "place": "Gambir",
+            "city": "Jakarta",
+            "imageUrl": "/assets/images/building/high_fly.png",
+            "rating": "4.8"
+        },
+        {
+            "id": "ad12fasd",
+            "name": "High Fly",
+            "place": "Gambir",
+            "city": "Jakarta",
+            "imageUrl": "/assets/images/building/high_fly.png",
+            "rating": "4.8"
+        }
+    ]
+
+}
