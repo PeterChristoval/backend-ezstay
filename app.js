@@ -8,7 +8,7 @@ const session = require('express-session')
 const methodOverride = require('method-override')
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/db_ezstay', {
+mongoose.connect('mongodb+srv://PeterChristoval:110603Peter@cluster0.ke91j.mongodb.net/db_ezstay?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
