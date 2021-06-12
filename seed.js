@@ -34,7 +34,7 @@ const data = [
                 'name': 'Glasses House',
                 'place': 'KBP',
                 'city': 'Bandung',
-                'imageUrl': 'images/1623385897978.png',
+                'imageUrl': 'images/glasses.png',
                 'rating': '4.7',
             },
         ]
@@ -49,7 +49,7 @@ const data = [
                 'city': 'Jakarta',
                 'rating': '4.7',
                 'description': '4.7',
-                'imageUrl': 'images/1623394670005.png',
+                'imageUrl': 'images/high-fly.png',
             },
         ]
     },

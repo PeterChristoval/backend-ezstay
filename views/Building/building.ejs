@@ -62,9 +62,11 @@
                                                 <td><%= building[i].city %> </td>
                                                 <td><%= building[i].rating %> </td>
                                                 <td><%= building[i].description %> </td>
-                                                <td><img src="http://localhost:3000/<%= building[i].imageUrl %>" alt="" style="width: 100px;"></td>
                                                 <td>
-                                                    <form action="/admin/building/<%= building[i]._id %>?_method=DELETE" method="post">
+                                                    <img src="https://admin-ezstay.herokuapp.com/<%= building[i].imageUrl %>" style="width: 100px;">
+                                                </td>
+                                                <td>
+                                                    <form action="/admin/building/<%= building[i]._id %>?_method=DELETE" method="POST">
                                                         <a href="javascript:void(0)" class="btn btn-warning btn-update" type="button" data-toggle="modal" data-target="#editBuilding" data-id ="<%= building[i]._id %>" data-name = "<%= building[i].name %>" data-price = "<%= building[i].price %>" data-place = "<%= building[i].place %>" data-city = "<%= building[i].city %>" data-rating = "<%= building[i].rating %>" data-description = "<%= building[i].description %>">
                                                             <i class="fas fa-fw fa-edit"></i>
                                                         </a>

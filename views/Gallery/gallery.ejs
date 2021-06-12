@@ -55,7 +55,7 @@
                                                 <td><%= gallery[i].city %> </td>
                                                 <td><%= gallery[i].rating %> </td>
                                                 <td>
-                                                    <img src="http://localhost:3000/<%= gallery[i].imageUrl %> " alt="" style="width: 100px;">
+                                                    <img src="https://admin-ezstay.herokuapp.com/<%= gallery[i].imageUrl %> " alt="" style="width: 100px;">
                                                 </td>
                                                 <td>
                                                     <form action="/admin/gallery/<%= gallery[i]._id %>?_method=DELETE" method="post">
