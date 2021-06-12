@@ -26,12 +26,14 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 300000 }
-}))
+app.use(
+    session({
+        secret: 'keyboard cat',
+        resave: false,
+        saveUninitialized: true,
+        cookie: { maxAge: 3000000 },
+    }),
+);
 app.use(flash())
 app.use(methodOverride('_method'))
 app.use(logger('dev'));
